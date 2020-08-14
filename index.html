@@ -6,12 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
+<body onload="awake()">
 	<div class="container">
 		<div class="row d-flex justify-content-between">
 			<div>
 				<!--conteudo fixo-->
-				<div id="h9" class="position-fixed  col-md-3">
+				<div id="h9" class=" col-md-3 ">
 					<h4 class="pt-5 font-weight-light" id="h10" style="color: #4E74BF">Olá, me chamo</h4>
 					<h1 id="h10">Matheus Alves Matos</h1>
 					<h2 style="color: #D9556D">Programação&</h2>
@@ -20,15 +20,24 @@
 				</div>
 			</div>
 			<!--conteudo movel-->
-			<div class="col-md-8 row d-flex justify-content-between"
-				style="height: 100%; word-wrap: break-word; padding: 2%; height: 60%">
+			<div id="conteudoMovel" class="col-md-8 row d-flex pt-4">
+				<div class="col-md-6" style="backgroufnd-color: #D9556D;">
 
-				<div id="card" class="text-justify" style="height: 50%;">
-					<h2>Sobre</h2>
-					<p>&nbsp Sou desenvolvedor com habilidades em desenvolvimento Web, Desktop e
-						Sistemas eletrônicos. Estou no 3° perido de Engenharia de Computação da UERJ, com
-						previsão de formatura para 2024. Atualmente, resido em Nova Friburgo (RJ). </p>
-				</div>
+
+					<div id="card" class="text-justify">
+						<h2>Sobre</h2>
+						<p>&nbsp Sou desenvolvedor com habilidades em desenvolvimento Web, Desktop e
+							Sistemas eletrônicos. Estou no 3° perido de Engenharia de Computação da UERJ, com
+							previsão de formatura para 2024. Atualmente, resido em Nova Friburgo (RJ). </p>
+						</div>
+						<div id="card" class="text-justify" style="margin-top: 2%;">
+							<h2>Sobre</h2>
+							<p>&nbsp Sou desenvolvedor com habilidades em desenvolvimento Web, Desktop e
+								Sistemas eletrônicos. Estou no 3° perido de Engenharia de Computação da UERJ, com
+								previsão de formatura para 2024. Atualmente, resido em Nova Friburgo (RJ). </p>
+							</div>
+					</div>
+					<div class="col-md-6">
 				<div id="card">
 					<h2>Habilidades</h2>
 					<h4 class="pt-2">Linguagens</h4>
@@ -76,8 +85,13 @@
 						</div>
 					</div>
 				</div>
-				ss
+			</div>	
+				<script>
+					function awake() {
+					}
+				</script>
 			</div>
+			</center>
 		</div>
 
 	</div>
