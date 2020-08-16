@@ -70,6 +70,8 @@ img {
 	height: 100%;
 	 word-wrap: break-word;
 	  height: 60%;
+	  animation-name: aparecer;
+	  animation-duration: 3s;
 }
 
 @media only screen and (max-width: 769px) {
