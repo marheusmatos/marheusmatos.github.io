@@ -6,7 +6,7 @@ body {
 	opacity: 100%;
 	height: 100%;
 	background-image: url("seta2.png");
-	animation: bgmove 100s infinite;
+	animation: b*gmove 100s infinite;
 }
 
 @keyframes bgmove {
@@ -21,12 +21,6 @@ body {
 	}
 }
 
-#h10 {
-	color: #2D4473;
-	animation-name: aparecer;
-	animation-duration: 3s;
-}
-
 @keyframes aparecer {
 	from {
 		transform: translate3d(0, 50%, 0);
@@ -37,6 +31,41 @@ body {
 		opacity: 1;
 	}
 }
+@keyframes fade {
+	from {
+		width: 0px;
+		opacity: 0.0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade1 {
+	from {
+		opacity: 0.0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+img {
+	border-style: solid;
+	border-color: white;
+}
+
+text {
+	padding: 10px;
+}
+
+#h10 {
+	color: #2D4473;
+	animation-name: aparecer;
+	animation-duration: 3s;
+}
+
+
 
 #h9 {
 	overflow: ridden;
@@ -46,17 +75,12 @@ body {
 	position: fixed;
 }
 
-#card {
+#card, #-sp1, #-sp2 {
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0px 0px 1px gray;
-margin-top: 1%;
+	margin-top: 1%;
 	padding: 8%;
-}
-
-img {
-	border-style: solid;
-	border-color: white;
 }
 
 #progress {
@@ -66,24 +90,22 @@ img {
 	border-radius: 10px;
 }
 
-#conteudoMovel{
+#conteudoMovel {
 	height: 100%;
-	 word-wrap: break-word;
-	  height: 60%;
-	  animation-name: aparecer;
-	  animation-duration: 3s;
+	word-wrap: break-word;
+	height: 60%;
+	animation-name: ap-arecer;
+	animation-duration: 3s;
 }
 
 @media only screen and (max-width: 769px) {
 	#conteudoMovel {
-	  margin:auto;
+		margin: auto;
 	}
-	#h9{
+	#h9 {
 		position: relative;
 	}
-	#card{
-		
-	}
+	#card {}
 }
 
 #icon {
@@ -96,21 +118,30 @@ img {
 	filter: drop-shadow(0px 0px 5px gray);
 	border-color: transparent;
 }
-@keyframes fade {
-	from {
 
-		width: 0px;
-		opacity: 0.0;
-	}
-	to {
-		
-
-		opacity: 1;
-	}
-}
 #barrinha {
 	border-radius: 10px;
 	height: 10px;
 	animation-name: fade;
 	animation-duration: 3s;
 }
+
+#sp1:hover #-sp1, #sp2:hover #-sp2  {
+	visibility: visible;
+	animation-name: fade1;
+	animation-duration: 0.2s;
+}
+
+#-sp1, #-sp2 {
+	visibility: hidden;
+	position: absolute;
+	transform: translateY(-50%);
+	margin-left: 10px;
+	margin-top: 0px;
+	padding: 4%;
+	min-width: 200px;
+	background-color: #f3f3f3;
+	z-index: 1;
+	box-shadow: 5px 5px 2px gray;
+}
+
