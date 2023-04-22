@@ -7,6 +7,7 @@ body {
   opacity: 100%;
   height: 100%;
   background-image: url(seta2.png);
+
   animation: bgmove 100s infinite;
   font-family: "Montserrat", sans-serif;
 
@@ -15,18 +16,21 @@ body {
 @keyframes bgmove {
   0% {
     background-position: 0, 0;
+   
   }
   50% {
     background-position: 500px, 100px;
   }
   100% {
     background-position: 0, 0;
+  
   }
 }
 @keyframes aparecer {
   from {
-    transform: translateY(50px);
+    transform: translateY(-10px);
     opacity: 0;
+
   }
   to {
     transform: translateY(0px);
@@ -87,10 +91,22 @@ text {
   background-color: #f6f6f6;
   border-radius: 10px;
 }
+.container{
+  animation-name: aparecer;
+  animation-duration: 3s;
 
+}
 @media only screen and (max-width: 769px) {
+ 
+  .container{
+    padding: 0 30px;
+  }
+  #card{
+margin-bottom: 10px;
+  }
   #conteudoMovel {
-    margin: auto;
+    margin: 1.5rem auto;
+    padding: 0px;
   }
   #h9 {
     position: relative;
